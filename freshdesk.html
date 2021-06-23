@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>This is document title</title>
+    <script>
+        function initFreshChat() {
+          window.fcWidget.init({
+            token: "4568751a-457c-46f3-89ef-447d7de7557a",
+            host: "https://wchat.freshchat.com"
+          });
+        }
+        function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"Freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+      </script>
+</head>
+
+<body>
+    <h1>This is the woa woa app</h1>
+    <p>chat below</p>
+</body>
+
+</html>
