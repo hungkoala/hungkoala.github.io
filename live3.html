@@ -1,0 +1,281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <style>
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        blockquote,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        tt,
+        var,
+        center,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        b,
+        pre,
+        strong,
+        sub,
+        sup,
+        u,
+        i dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100.01%;
+            font-family: inherit;
+            font-weight: normal;
+            font-style: normal;
+            vertical-align: baseline;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        label {
+            font-weight: inherit;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        input {
+            box-sizing: border-box;
+            resize: none;
+        }
+
+        textarea {
+            box-sizing: border-box;
+            resize: none;
+            overflow: auto;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            position: relative;
+        }
+
+        :focus {
+            outline: 0;
+        }
+
+        input:-webkit-autofill,
+        textarea:-webkit-autofill,
+        select:-webkit-autofill {
+            background-color: inherit;
+            color: inherit;
+        }
+
+        html,
+        body {
+            min-height: 100%;
+            height: 100%;
+        }
+
+        .tableLayout {
+            width: 100%;
+            min-height: 100%;
+            display: table;
+            height: 100%;
+        }
+
+        .tableRow {
+            display: table-row;
+        }
+
+        .tableCell {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            background: url("data:image/svg+xml,%3Csvg%20version%3D%271.1%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20width%3D%27100px%27%20height%3D%27100px%27%20viewBox%3D%270%200%20100%20100%27%20enable-background%3D%27new%200%200%20100%20100%27%20xml%3Aspace%3D%27preserve%27%3E%3Crect%20x%3D%27-2%27%20opacity%3D%270.1%27%20width%3D%27103%27%20height%3D%2744%27%2F%3E%3Crect%20x%3D%27-2%27%20y%3D%2787%27%20opacity%3D%270.05%27%20width%3D%27103%27%20height%3D%2744%27%2F%3E%3Crect%20opacity%3D%270.05%27%20width%3D%2735%27%20height%3D%27100%27%2F%3E%3Crect%20x%3D%27-5%27%20y%3D%27-31%27%20opacity%3D%270.05%27%20width%3D%2768%27%20height%3D%27100%27%2F%3E%3Crect%20x%3D%2763%27%20y%3D%2769%27%20opacity%3D%270.05%27%20width%3D%2768%27%20height%3D%27100%27%2F%3E%3C%2Fsvg%3E") no-repeat center center;
+            background-size: cover;
+        }
+
+        .tableMainCell {
+            max-width: 50%;
+        }
+
+        .mainContent {
+            display: inline-block;
+            background: #fff;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            padding: 25px;
+            border: 2px dashed #aaa;
+        }
+
+        h1 {
+            padding-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p {
+            margin: 5px 0;
+            font-size: 12px;
+            line-height: 21px;
+            vertical-align: middle;
+        }
+
+        b {
+            font-weight: bold;
+        }
+
+        b.online {
+            background: #00a81c;
+            color: #fff;
+            padding: 0 10px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        b.offline {
+            background: #da1f1f;
+            color: #fff;
+            padding: 0 10px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        .buttonCode {
+            margin-top: 20px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        (function (d, src, c) { var t = d.scripts[d.scripts.length - 1], s = d.createElement('script'); s.id = 'la_x2s6df8d'; s.async = true; s.src = src; s.onload = s.onreadystatechange = function () { var rs = this.readyState; if (rs && (rs != 'complete') && (rs != 'loaded')) { return; } c(this); }; t.parentElement.insertBefore(s, t.nextSibling); })(document,
+            'https://zooop.ladesk.com/scripts/track.js',
+            function (e) { LiveAgent.createButton('d5wjg584', e); });
+    </script>
+</head>
+
+<body>
+    <div class="tableLayout">
+        <div class="tableRow">
+            <div class="tableCell"></div>
+            <div class="tableCell"></div>
+            <div class="tableCell"></div>
+        </div>
+        <div class="tableRow">
+            <div class="tableCell"></div>
+            <div class="tableCell tableMainCell">
+                <div class="mainContent">
+                    <h1>Preview and test</h1>
+                    <p>You need to have <b class="online">Online</b> chat service for testing online state of Chat
+                        buttons.</p>
+                    <p>You need to have <b class="offline">Offline</b> chat service for testing offline state of Chat
+                        buttons.</p>
+                    <div class="buttonCode">
+
+                    </div>
+                </div>
+            </div>
+            <div class="tableCell"></div>
+        </div>
+        <div class="tableRow">
+            <div class="tableCell"></div>
+            <div class="tableCell"></div>
+            <div class="tableCell"></div>
+        </div>
+    </div>
+</body>
+
+</html>
