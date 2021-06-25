@@ -3,16 +3,32 @@
 
 <head>
     <title>Hello, World!</title>
+    <meta charset="utf-8">
 </head>
 
 <body>
     <p>Hello, World!</p>
 
-    <div style="width: 200px; height: 200px;">
-        <script id="ze-snippet"
-            src="https://static.zdassets.com/ekr/snippet.js?key=60f71ecf-40c8-4955-89c0-fdbd4b22a153"> </script>
-    </div>
+    <script type="text/javascript">
+        window.zESettings = {
+            webWidget: {
+                color: {
+                    theme: '#78a300'
+                },
+                offset: {
+                    horizontal: '100px',
+                    vertical: '100px'
+                },
+            }
+        };
+    </script>
+    <script id="ze-snippet"
+        src="https://static.zdassets.com/ekr/snippet.js?key=60f71ecf-40c8-4955-89c0-fdbd4b22a153"></script>
+    <script type="text/javascript">
+        zE('webWidget', 'setLocale', 'fr');
+    </script>
 
+    <button onclick="zE('webWidget', 'hide')">Hide Web Widget</button>
 </body>
 
 </html>
