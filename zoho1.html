@@ -4,22 +4,13 @@
 <head>
     <title>Hello, World!</title>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="cript-src 'nonce-kakakakaka'">
 </head>
 
 <body>
     <p>Zoho desk test app!</p>
-    <script type="text/javascript">
-        var $zoho = $zoho || {}; $zoho.salesiq = $zoho.salesiq || { widgetcode: "79b388a69ea4455f941afdc673eb629cb876356c66b2539b79c2029e64010e89", values: {}, ready: function () { } };
-        var d = document;
-        s = d.createElement("script");
-        s.type = "text/javascript";
-        s.id = "zsiqscript";
-        s.defer = true;
-        s.src = "https://salesiq.zoho.com/widget";
-        t = d.getElementsByTagName("script")[0];
-        t.parentNode.insertBefore(s, t);
-        d.write("<div id='zsiqwidget'></div>");
-    </script>
+    <script type="text/javascript" nonce="kakakakaka"
+        src="https://desk.zoho.com/portal/api/web/inapp/616403000000434017?orgId=753592022" defer></script>
 
 </body>
 
