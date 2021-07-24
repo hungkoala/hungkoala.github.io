@@ -146,8 +146,8 @@ const main = async () => {
         });
 
         // Open the session here !!!!
-        await VoxeetSDK.session.open(currentUser)
-        initUI();
+        //await VoxeetSDK.session.open(currentUser)
+        //initUI();
     } catch (e) {
         alert('Something went wrong : ' + e)
     }
