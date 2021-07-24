@@ -35,9 +35,9 @@ const participants = [{
     },
 
 ]
-// let randomName = avengersNames[Math.floor(Math.random() * avengersNames.length)]
+let randomName = avengersNames[Math.floor(Math.random() * avengersNames.length)]
 
-const currentUser = participants[0];
+// const currentUser = participants[0];
 
 
 const main = async () => {
@@ -121,12 +121,28 @@ const main = async () => {
         }
     });
 
-    VoxeetSDK.initialize(
-        "f504EAEErLVdJ2GsaNJyRw==",
-        "17j_SclvklqaWBA0k9umFaq5eQyigQs3nAiEhgcAZXg="
-    )
+    // https://4274e96ab106.ngrok.io
+
+    // VoxeetSDK.initialize(
+    //     "f504EAEErLVdJ2GsaNJyRw==",
+    //     "17j_SclvklqaWBA0k9umFaq5eQyigQs3nAiEhgcAZXg="
+    // )
 
     try {
+        const data = await fetch('https://4274e96ab106.ngrok.io/bewell-c3d49/asia-east2/app/api/token');
+        const result = data.json();
+        const access_token = result.access_token;
+
+        await VoxeetSDK.initializeToken(access_token, async () => {
+            try {
+                const d = await fetch('https://4274e96ab106.ngrok.io/bewell-c3d49/asia-east2/app/api/refresh');
+                const d1 = d.json()
+                return d1.access_token;
+            } catch (e) {
+                console.log('refresh token error', e)
+            }
+        });
+
         // Open the session here !!!!
         await VoxeetSDK.session.open(currentUser)
         initUI();
