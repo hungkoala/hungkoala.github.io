@@ -35,7 +35,7 @@ const participants = [{
     },
 
 ]
-let randomName = avengersNames[Math.floor(Math.random() * avengersNames.length)]
+let randomName = participants[Math.floor(Math.random() * participants.length)]
 
 // const currentUser = participants[0];
 
