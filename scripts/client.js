@@ -132,6 +132,8 @@ const main = async () => {
         const data = await fetch('https://4274e96ab106.ngrok.io/bewell-c3d49/asia-east2/app/api/token');
         const result = data.json();
         const access_token = result.access_token;
+        console.log('access_token=', access_token);
+
 
         await VoxeetSDK.initializeToken(access_token, async () => {
             try {
