@@ -5,11 +5,15 @@
     <title>Hello, World!</title>
     <meta charset="utf-8">
     <!-- <meta http-equiv="Content-Security-Policy" content="cript-src '*'"> -->
+    <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+    <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+
 </head>
 
 <body>
     <p>Zoho desk test app!</p>
-    <iframe src="https://bewell-dev.web.app/" style="height:800px;width:800px;" title="Iframe Example"></iframe>
+    <iframe is="x-frame-bypass" src="https://bewell-dev.web.app/" style="height:800px;width:800px;" title="Iframe Example"></iframe>
+
 </body>
 
 </html>
