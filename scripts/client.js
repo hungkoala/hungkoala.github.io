@@ -123,34 +123,34 @@ const main = async () => {
 
     // https://4274e96ab106.ngrok.io
 
-    // VoxeetSDK.initialize(
-    //     "f504EAEErLVdJ2GsaNJyRw==",
-    //     "17j_SclvklqaWBA0k9umFaq5eQyigQs3nAiEhgcAZXg="
-    // )
+    VoxeetSDK.initialize(
+        "OJ7aTWDgTTRkGy6fyz3SgA==",
+        "XGIFaWczY7BSyQC0sxg1h4O097UlAgKcLQ4Ut5BdR3M="
+    )
 
-    try {
-        const data = await fetch('https://4274e96ab106.ngrok.io/bewell-c3d49/asia-east2/app/api/token');
-        const result = data.json();
-        const access_token = result.access_token;
-        console.log('access_token=', access_token);
+    // try {
+    //     const data = await fetch('https://4274e96ab106.ngrok.io/bewell-c3d49/asia-east2/app/api/token');
+    //     const result = data.json();
+    //     const access_token = result.access_token;
+    //     console.log('access_token=', access_token);
 
 
-        await VoxeetSDK.initializeToken(access_token, async () => {
-            try {
-                const d = await fetch('https://4274e96ab106.ngrok.io/bewell-c3d49/asia-east2/app/api/refresh');
-                const d1 = d.json()
-                return d1.access_token;
-            } catch (e) {
-                console.log('refresh token error', e)
-            }
-        });
+    //     await VoxeetSDK.initializeToken(access_token, async () => {
+    //         try {
+    //             const d = await fetch('https://4274e96ab106.ngrok.io/bewell-c3d49/asia-east2/app/api/refresh');
+    //             const d1 = d.json()
+    //             return d1.access_token;
+    //         } catch (e) {
+    //             console.log('refresh token error', e)
+    //         }
+    //     });
 
-        // Open the session here !!!!
-        //await VoxeetSDK.session.open(currentUser)
-        //initUI();
-    } catch (e) {
-        alert('Something went wrong : ' + e)
-    }
+    //     // Open the session here !!!!
+    //     //await VoxeetSDK.session.open(currentUser)
+    //     //initUI();
+    // } catch (e) {
+    //     alert('Something went wrong : ' + e)
+    // }
 }
 
 main()
